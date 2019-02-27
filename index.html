@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="memory.css">
+    <title>Steve Sullivan - Memory Game</title>
+</head>
+<body>
+    <nav class="navbar justify-content-around navbar-light bg-light">
+        <h5>High Score: <span id="high_score">5</span></h5>
+        <button class="btn btn-warning" id="play">Play!</button>
+        <h5>Current Score:  <span id="score">0</span></h5>
+    </nav>
+
+    <!-- Cards will go in here... -->
+    <!-- 27 cards -->
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around">
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='1' onclick="turnCard('1')"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='2' onclick="turnCard('2')"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='3' onclick="turnCard('3')"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='4' onclick="turnCard('4')"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='5' onclick="turnCard('5')"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='6' onclick="turnCard('6')"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>            
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around">
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>                
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around">        
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" onclick="turnCard()"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="memory.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
