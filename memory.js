@@ -1,108 +1,132 @@
 
+let score = 0;
+let numberRemaining = 0;
 
-/*  List of singers:
-Layne Staley
-Scott Weiland
-Jimmy Hendrix
-Freddie Mercury
-Jim Morrison
-Janis Joplin
-(need 3 more)
-*/
+let cards = [
+    'cf_chester_bennington.jpg',
+    'cf_chester_bennington.jpg',
+    'cf_chris_cornell.jpg',
+    'cf_chris_cornell.jpg',
+    'cf_kurt_cobain.jpg',
+    'cf_kurt_cobain.jpg'
+];
 
 let scoreElement = document.getElementById("score");
 let playButton = document.getElementById("play");
 
-let score = 0;        // Track score (total number of card clicks)
-let selectCount = 0;  // We want to let the user make 2 selections before changing back....
-let cards = {};       // Hold your card data  -->  card[id] = image.jpg
-let counter = 0;      // Used for id of cards
+resetGame();
 
-let pickOne = 0;
-let remaining = 12;
 
-cards = populateCards();
-
-playButton.addEventListener("click", function () {
-    
-    cards = {};
-    cards = populateCards();
-    
-    for (let i = 1; i <= 24; i++){
-        document.getElementById(i).src = "card_back.jpg";
-    }
-});
-
-function populateCards(){
-    let cardDeck = {};
-
-    // We'll randomly pluck images from here to fill out the cards object
-    let card_faces = [
-        'cf_chester_bennington.jpg',
-        'cf_chester_bennington.jpg',
-        'cf_chris_cornell.jpg',
-        'cf_chris_cornell.jpg',
-        'cf_kurt_cobain.jpg',
-        'cf_kurt_cobain.jpg'
-    ];
-
-    // Lets randomly splice that list of card faces to death:
-    while (card_faces.length) {
-        counter++
-        cardDeck[counter] = (card_faces.splice(card_faces.length * Math.random() | 0, 1)[0]);
-    }
-
-    return cardDeck;
+// Cribbed from Stack:
+// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {    
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    } 
 }
 
-function turnCard(card_id) {
-    selectCount++;
+// These vars will track the current 2 picks:
+let pick1 = null;
+let pick2 = null;
+
+
+
+function turnCard(id) {
     score++;
 
-    scoreElement.innerHTML = score;
-    document.getElementById(card_id).src = "images/" + cards[card_id];
+    // Show the image...
+    document.getElementById(id).src = 'images/' + cards[id];
 
-    if (selectCount === 1) {
-        pickOne = card_id;
-    }
-    else {
-        // We're on pick 2...
+    if (pick1) {
+        // We already have pick1, so this has to be pick2:
+        
+        pick2 = id;
 
-        selectCount = 0;
+        // We'll need to disable the onclick or temporarily remove it so you can't reclick it....
 
-        let img1 = cards[pickOne];
-        let img2 = cards[card_id];
+        // Check if pick1 == pick2
+        if (cards[pick1] === cards[pick2]){
+            // If they do we 
 
-        let img1Element = document.getElementById(pickOne);
-        let img2Element = document.getElementById(card_id);
 
-        if (img1 === img2){
-            // Yay, we have a match!
+            // Disable the clicks....
+            document.getElementById(pick1).onclick = '';
+            document.getElementById(pick2).onclick = '';
 
-        }
-        else {
-            // Give it 3 seconds, then chane back to back of card for both....
-            
-            turnCardFaceDown(pickOne);
-            turnCardFaceDown(card_id);
 
-            remaining--;
+            // Subtract number of matches left:
+            numberRemaining--;
 
-            if (remaining === 0) {
-                // WINNER!
+            // Check if it's the end of the game:
+            if (numberRemaining == 0) {
+                // Yay...now what?
             }
             else {
-                // Keep going...
+                // more to go....keep going.
             }
+        }
+        else {
+            // then we want to wait 2 seconds and
+            // turn these cards back over.
+            //alert('they do not match');
 
+            // Reset selections after 2 seconds:
+            setTimeout(function (pid1,pid2) {
+                // Turn the two cards back over....
+                document.getElementById(pid1).src = "card_back.jpg";
+                document.getElementById(pid2).src = "card_back.jpg";
+
+                // Plug the onclick event back in....
+
+            }, 2000, pick1, pick2);
+
+
+            
+            
         }
 
-        pickOne = 0;
-        
+        pick1 = null;
+        pick2 = null;
     }
+    else {
+        pick1 = id;
+    }
+
+}
+
+function resetPicks(p1,p2){
+    // Turn Cards Back Over
+    document.getElementById(p1).src = "card_back.jpg";
+    document.getElementById(p2).src = "card_back.jpg";
+
+    // Reinstate their onclick events
 
 }
 
 function turnCardFaceDown(id){
     document.getElementById(id).src = "card_back.jpg";
+}
+
+
+
+playButton.addEventListener("click", function () {
+    resetGame();
+
+    // hide all the cards
+    for (let i = 0; i < 24; i++){
+        document.getElementById(i).src = "card_back.jpg";
+    }
+    
+});
+
+
+function resetGame(){
+    score = 0;
+    numberRemaining = 12;
+
+    // Need to re-add the event 
+
+    // Initial Shuffle:
+    shuffleArray(cards);
 }
