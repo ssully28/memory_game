@@ -5,52 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" href="memory.css">
     <title>Steve Sullivan - Memory Game</title>
 </head>
 <body>
     <nav class="navbar justify-content-around navbar-trans">
-        <h5>High Score: <span id="high_score">5</span></h5>
-        <button class="btn btn-warning" id="play">Play!</button>
+        <h5>Concentration</h5>
+        <button class="btn btn-outline-warning" id="play">Play!</button>
         <h5>Current Score:  <span id="score">0</span></h5>
+    </nav>
+    <nav class="navbar navbar-trans">
+            <h5><span id='feedback'>Remember Us!</span></h5>
     </nav>
 
     <!-- Cards will go in here... -->
     <!-- 27 cards -->
     <div class="container">
         <div class="d-flex flex-wrap justify-content-around">
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='0' onclick="turnCard('0')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='1' onclick="turnCard('1')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='2' onclick="turnCard('2')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='3' onclick="turnCard('3')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='4' onclick="turnCard('4')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='5' onclick="turnCard('5')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='6' onclick="turnCard('6')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='7' onclick="turnCard('7')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='0' onclick="turnCard('0')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='1' onclick="turnCard('1')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='2' onclick="turnCard('2')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='3' onclick="turnCard('3')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='4' onclick="turnCard('4')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='5' onclick="turnCard('5')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='6' onclick="turnCard('6')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='7' onclick="turnCard('7')"></div>
         </div>
     </div>
     <div class="container">
         <div class="d-flex flex-wrap justify-content-around">
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='8' onclick="turnCard('8')"></div>            
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='9' onclick="turnCard('9')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='10' onclick="turnCard('10')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='11' onclick="turnCard('11')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='12' onclick="turnCard('12')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='13' onclick="turnCard('13')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='14' onclick="turnCard('14')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='15' onclick="turnCard('15')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='8' onclick="turnCard('8')"></div>            
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='9' onclick="turnCard('9')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='10' onclick="turnCard('10')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='11' onclick="turnCard('11')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='12' onclick="turnCard('12')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='13' onclick="turnCard('13')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='14' onclick="turnCard('14')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='15' onclick="turnCard('15')"></div>
         </div>
     </div>
     <div class="container">
         <div class="d-flex flex-wrap justify-content-around">        
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='16' onclick="turnCard('16')"></div>                
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='17' onclick="turnCard('17')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='18' onclick="turnCard('18')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='19' onclick="turnCard('19')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='20' onclick="turnCard('20')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='21' onclick="turnCard('21')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='22' onclick="turnCard('22')"></div>
-            <div class="card" style="width: 100px;"><img src="card_back.jpg" class="card-img" id='23' onclick="turnCard('23')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='16' onclick="turnCard('16')"></div>                
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='17' onclick="turnCard('17')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='18' onclick="turnCard('18')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='19' onclick="turnCard('19')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='20' onclick="turnCard('20')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='21' onclick="turnCard('21')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='22' onclick="turnCard('22')"></div>
+            <div class="card" style="width: 100px;"><img src="https://photos.smugmug.com/Siteimages/Memorygame/Images/n-54KHMf/i-jRWPfbz/0/0bf7842a/M/i-jRWPfbz-M.jpg" class="card-img" id='23' onclick="turnCard('23')"></div>
         </div>
     </div>
 

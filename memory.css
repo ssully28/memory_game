@@ -1,17 +1,20 @@
 body {
-    background-image: url("images/background.jpg");
-    
+    background-image: url("https://photos.smugmug.com/photos/i-tK9QF2X/0/a2bf8473/XL/i-tK9QF2X-XL.jpg");
+    /* font-family: 'Gloria Hallelujah', cursive; */
 }
-
-
 
 .navbar-trans {
     background: transparent;
-    color: yellow;
+    color: #ffbe27;
 }
 
 .card {
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: black;
+}
+
+#feedback {
+    font-size: 15px;
+    color: white;
 }
