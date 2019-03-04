@@ -1,6 +1,9 @@
 body {
     background-image: url("https://photos.smugmug.com/photos/i-tK9QF2X/0/a2bf8473/XL/i-tK9QF2X-XL.jpg");
-    /* font-family: 'Gloria Hallelujah', cursive; */
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar-trans {
