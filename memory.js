@@ -301,6 +301,7 @@ let win_average = [
     "You're the Diet Coke of Concentration players",
     "Watching that was about exciting as watching paint dry",
     "Finally done...",
+    "I was starting to doubt you'd ever get that done.",
     "That was the Toyota Corolla of games....  Yawn.",
     "Like one music critic wrote review of Bohemian Rhapsody:  'This was perfectly adequate.'"
 ];
@@ -348,13 +349,16 @@ let snark_level1 = [
     "Lots of cards left....",
     "Pro tip...  try remembering which cards you already clicked.",
     "Are you even trying?",
+    "As much as I enjoy making fun of you, I must admit, I don't have a very good memory.  It's much better than yours though.",
     "Tic toc tic toc tic toc....",
     "You're kind of floundering about.",
     "Did you suffer some sort of brain trauma?",
+    "Darn....you were SOOOO close.  Wait, sorry, no, you were way off, hahahaha!",
     "Are you getting adequate sleep....?  Your memory is rather poor.",
     "Maybe you should try the 'Memory Palace' technique...",
     "I hear there's a memory technique called 'chunking', which sounds like it's the dance that the chubby kid does in Goonies",
     "I'm getting sleepy watching you.",
+    "Memory 'champion' Dom O'Brien was able to memorize 54 decks of cards in sequence looking at each card only once by using the 'Memory Palace' technique!",
     "I'm much better than you are at this...",
     "I was just going to say something, but I can't remember what it was....  Based on how you're doing so far, I'm guessing that happens to you all the time!",
     "Epic yawn fest....c'mon , pick it up.",
@@ -372,6 +376,7 @@ let snark_level2 = [
     "Okay, this is getting painful to watch.",
     "I'm pretty sure a trained chimp could probably do better than this.",
     "Would you like to buy a life line...?",
+    "It's a popular belief that people only use 10% of their brain.  I think in your case it might be closer to 2%.",
     "Please stop!  Just delete me....  find the server I'm living on and burn it to the ground, watching you is killing me.",
     "I'd offer to help, but I think it's a little late for that.",
     "Wake me up when you finish....which at this rate might be tomorrow.    If we're lucky.",
@@ -407,11 +412,12 @@ let cobain = [
 let marley = [
     "Bob Marley died of skin cancer...",
     "Cancer really sucks man.",
-    "Bob Marley survived an assinsation attempt, only to die of cancer 5 years later.",
+    "Bob Marley survived an assinsation attempt by 3 armed men at his home, only to die of cancer 5 years later.",
     "'Free speech carries with it some freedom to listen.' - Bob Marley",
     "\"If you’re white and you’re wrong, then you’re wrong; if you’re black and you’re wrong, you’re wrong. People are people.\" - Bob Marley",
     "\“I only have one thing I really like to see happen. I like to see mankind live together – black, white, Chinese, everyone – that’s all.\” Me too Bob...me too.",
     "\"The people who were trying to make this world worse are not taking the day off. Why should I?\" - Bob Marley, speaking truth...",
+    "When doctors discovered the cancer, Bob Marley was advised to have his toe amputated, but refused as his Rastafarian faith considers it a sin to have a part of the body ‘temple’ removed."
 ];
 
 let joplin = [
@@ -462,7 +468,8 @@ let hendrix = [
     "While in the army, Hendrix obsession with his guitar contributed to his neglect of his duties, which led to taunting and physical abuse from his peers, who at least once hid the guitar from him until he had begged for its return.",
     "Hendrix platoon sergeant wrote: 'He has no interest whatsoever in the Army ... It is my opinion that Private Hendrix will never come up to the standards required of a soldier.'",
     "'He (Hendrix) played just about every style you could think of, and not in a flashy way. I mean he did a few of his tricks, like playing with his teeth and behind his back, but it wasn't in an upstaging sense at all, and that was it ... He walked off, and my life was never the same again' - Eric Clapton",
-    "Hendrix described his music as 'Free Feeling. It's a mixture of rock, freak-out, rave and blues'."
+    "Hendrix described his music as 'Free Feeling. It's a mixture of rock, freak-out, rave and blues'.",
+    "Jimi Hendrix was born in Seattle"
 ];
 let weiland = [
     "Weiland was a Notre Dame Fighting Irish football fan", 
